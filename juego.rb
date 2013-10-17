@@ -49,11 +49,7 @@ require 'haml'
   end # PiedraPapelTijera
   
   if $0 == __FILE__
-    Rack::Server.start(
-      :app => Rack::ShowExceptions.new(
-                Rack::Lint.new(
-                  PiedraPapelTijera::App.new)),
-      :Port => 8080,
-      :server => 'thin'
-    )
+    Rack::Handler::Thin.run(Rack::Builder.new {
+      use Rack::Static, :urls => ["/css", "/images"], :root => "public"
+    }, Port: 8080)
   end
