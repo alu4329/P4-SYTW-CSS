@@ -1,0 +1,70 @@
+body {
+  background-image: url('../images/fondo.jpg');
+}
+
+h1 {
+  font-size: 3em;
+  letter-spacing: -2px;
+  margin-bottom: 30px;
+  text-align: center;
+  color: white;
+}
+
+h4 {
+  font-size: 3em;
+}
+
+
+#top {
+  text-align: center;
+}
+
+
+#elec {
+  text-align: center;
+}
+
+#texto {
+  text-align: center;
+  margin-left: 22em;
+}
+
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+  height: auto;
+  width: auto;
+}
+
+#middle{
+  margin-top: 5em;
+}
+
+#humano, #vs, #maquina {
+  text-align: center;
+  height: 15em;
+}
+
+#botton {
+  margin-top: 4em;
+}
+
+#ganar {
+  color: green;
+}
+
+#empatar {
+  color: white;
+}
+
+#perder {
+  color: red;
+}
+
+#resultado {
+  margin-left: 20em;
+  margin-top: 1.5em;
+}
+
+

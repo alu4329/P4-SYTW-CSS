@@ -26,30 +26,30 @@ require 'haml'
 	#Elección del jugador a través del path_info
         player_throw = req.GET["choice"]
 
-        answer = if !@throws.include?(player_throw)
-            "Elija una de las siguientes:"
-          elsif player_throw == computer_throw
-            "Empataste con la máquina"
-          elsif computer_throw == @defeat[player_throw]
-            "Felicidades, ganaste; #{player_throw} gana #{computer_throw}"
-          else
-            "Lástima; #{computer_throw} gana #{player_throw}. Suerte la próxima vez"
-          end
-
-        engine = Haml::Engine.new File.open("views/ejecutable.haml").read
+        engine = Haml::Engine.new File.open("views/index.html.haml").read
       
         res = Rack::Response.new
       
-        res.write engine.render(
-          {},
-          :answer => answer)
+	resultado = {
+          :throws => @throws,
+          :computer_throw => computer_throw,
+          :player_throw => player_throw
+        }
+		
+        res.write engine.render({},resultado)
+        
         res.finish
       end # call
     end # App
   end # PiedraPapelTijera
   
   if $0 == __FILE__
-    Rack::Handler::Thin.run(Rack::Builder.new {
+    builder = Rack::Builder.new do
       use Rack::Static, :urls => ["/css", "/images"], :root => "public"
-    }, Port: 8080)
+      use Rack::ShowExceptions
+      use Rack::Lint
+      run PiedraPapelTijera::App.new
+    end
+
+    Rack::Handler::Thin.run builder, :Port => 9000
   end
