@@ -31,7 +31,6 @@ require 'haml'
         res = Rack::Response.new
       
 	resultado = {
-	  :defeat => @defeat,
           :throws => @throws,
           :computer_throw => computer_throw,
           :player_throw => player_throw
