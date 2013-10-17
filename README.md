@@ -1,4 +1,4 @@
-# Práctica 4 - SYTW <url>(http://www.userlogos.org/files/logos/mafi0z/ruby.png)
+# Práctica 4 - SYTW !<url>(http://www.userlogos.org/files/logos/mafi0z/ruby.png)
 
 ## Víctor Plaza Martín - alu4329
 
@@ -19,7 +19,7 @@ Añadir Hojas de Estilo CSS a la aplicación "PiedraPapelTijeras"
 
 ###Método de complicación
 	Rake
-o
+****
 	ruby juego.rb
 
 Posteriormente escribir en el navegador utilizado:
