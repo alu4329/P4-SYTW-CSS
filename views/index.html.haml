@@ -46,13 +46,13 @@
               %img{src: "http://luxorprofessional.com/productos/luxor_tijera-titan-pro267-r.png"}        
             -else
           .clear
-    .container_16
-      #botton.grid_16
-        #resultado.grid_5.alpha
-          %h3 El resultado obtenido es:
-          .clear
-        #final.grid_5.alpha
-          -if player_throw
+    -if player_throw
+      .container_16
+        #botton.grid_16
+          #resultado.grid_5.alpha
+            %h3 El resultado obtenido es:
+            .clear
+          #final.grid_5.alpha
             -if player_throw == computer_throw
               #empatar
                 %h4 ¡Empataste!
@@ -79,7 +79,6 @@
                   %h4 ¡Perdiste! 
             -else
           .clear
-
 
 
 
