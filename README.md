@@ -1,5 +1,5 @@
 # Práctica 4 - SYTW
-![Ruby]:(http://www.userlogos.org/files/logos/mafi0z/ruby.png)
+![Ruby](http://www.userlogos.org/files/logos/mafi0z/ruby.png)
 
 ## Víctor Plaza Martín - alu4329
 
@@ -19,9 +19,11 @@ Añadir Hojas de Estilo CSS a la aplicación "PiedraPapelTijeras"
 7. Rakefile - Archivo de ejecución de Ruby
 
 ###Método de complicación
-	Rake
+	$ rake
 
-	ruby juego.rb
+Otro método:
+
+	$ ruby juego.rb
 
 ****
 Posteriormente escribir en el navegador utilizado:
