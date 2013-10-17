@@ -8,16 +8,22 @@
   %body
     .container_16
       #cabecera.grid_16
-        %h1 Piedra, Papel y Tijera
+        %h1 Práctica 4 SYTW - Aplicación Web con CSS
         .clear
     .container_16
       #top.grid_16
         #elec.grid_5.alpha
+          %h3 Elija su jugada:
           -throws.map do |x|
             %a{:href=>"/?choice=#{x}"}
               %button #{x}         
           .clear
-        #imagen.grid_5.alpha
+        #texto.grid_5.alpha
+          %h3 Elección de la máquina:
+          .clear
+    .container_16
+      #middle.grid_16
+        #humano.grid_5.alpha
           -if player_throw == 'piedra'
             %img{src: "http://images2.wikia.nocookie.net/__cb20130329024712/thelegend-of-zelda-fanon/es/images/d/d0/Piedra.png"}
           -elsif player_throw == 'papel' 
@@ -26,7 +32,63 @@
             %img{src: "http://luxorprofessional.com/productos/luxor_tijera-titan-pro267-r.png"}        
           -else
           .clear
-        #maquina.grid_5.alpha
-          %h1 MAQUINA
-          
+        #vs.grid_5.alpha
+          -if player_throw
+            %img{src: "http://1.bp.blogspot.com/-y_PLAf5QAjo/UObVVUEGr2I/AAAAAAAAAUI/NHjC4t6FXDk/s200/vs.png"} 
           .clear
+        #maquina.grid_5.alpha
+          -if player_throw
+            -if computer_throw == 'piedra'
+              %img{src: "http://images2.wikia.nocookie.net/__cb20130329024712/thelegend-of-zelda-fanon/es/images/d/d0/Piedra.png"}
+            -elsif computer_throw == 'papel' 
+              %img{src: "http://1.bp.blogspot.com/-gm4dfkpA4lA/UHhg6IdR1nI/AAAAAAAAAGU/gPGUw3H45tg/s1600/bola+papel.png"}
+            -elsif computer_throw == 'tijera' 
+              %img{src: "http://luxorprofessional.com/productos/luxor_tijera-titan-pro267-r.png"}        
+            -else
+          .clear
+    .container_16
+      #botton.grid_16
+        #resultado.grid_5.alpha
+          %h3 El resultado obtenido es:
+          .clear
+        #final.grid_5.alpha
+          -if player_throw
+            -if player_throw == computer_throw
+              #empatar
+                %h4 ¡Empataste!
+            -elsif player_throw == 'piedra'
+              -if computer_throw == 'tijera'
+                #ganar
+                  %h4 ¡Ganaste!
+              -else
+                #perder
+                  %h4 ¡Perdiste!
+            -elsif player_throw == 'papel'
+              -if computer_throw == 'piedra'
+                #ganar
+                  %h4 ¡Ganaste!
+              -else
+                #perder
+                  %h4 ¡Perdiste!           
+            -elsif player_throw == 'tijera'
+              -if computer_throw == 'papel'
+                #ganar
+                  %h4 ¡Ganaste!
+              -else
+                #perder
+                  %h4 ¡Perdiste! 
+            -else
+          .clear
+
+
+
+
+
+
+
+
+
+
+
+
+
