@@ -1,4 +1,5 @@
-# Práctica 4 - SYTW   ![Ruby](http://www.userlogos.org/files/logos/mafi0z/ruby.png)
+# Práctica 4 - SYTW  
+![Ruby](http://medularis.com/assets/ruby-fbdcfd4fc56395d1df69240ccd77275e.png)
 
 ## Víctor Plaza Martín - alu4329
 
